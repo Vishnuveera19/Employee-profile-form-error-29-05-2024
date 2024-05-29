@@ -43,6 +43,7 @@ const [pnProjectsiteId,setpnProjectsiteId]=useState("")
 const [dDate,setdDate]=useState("")
 const [vReason,setvReason]=useState("")
 const [rDepartment,setrDepartment]=useState("")
+const[fatherName, setFatherName] = useState("")
 
 
 
@@ -95,6 +96,7 @@ const formData = {
   dDate: dDate,
   vReason: vReason,
   rDepartment: rDepartment,
+  fatherName: fatherName,
   paymCategory:{
     "pnCategoryId":  pnCategoryId
   },
@@ -386,7 +388,7 @@ console.log(formData)
                   variant="outlined"
                   fullWidth
                   required
-                  onChange={(e) => setpnProjectsiteId(e.target.value)} 
+                  onChange={(e) => setdDate(e.target.value)} 
                   InputLabelProps={{shrink:true}}
                   type='datetime-local'
                   
@@ -429,6 +431,22 @@ console.log(formData)
                 </FormControl>
                 </Grid>
 
+                <Grid  xs={12}  sm={6} item>
+                  <FormControl fullWidth> 
+                <TextField
+              name="fatherName"
+                 
+                  label="fatherName"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  onChange={(e) => setFatherName(e.target.value)} 
+                  InputLabelProps={{shrink:true}}
+                  
+                />
+                </FormControl>
+                </Grid>
+
 
               
         </Grid>
@@ -453,6 +471,7 @@ const formData = {
   dDate: dDate,
   vReason: vReason,
   rDepartment: rDepartment,
+  fatherName: fatherName,
   paymCategory:{
     "pnCategoryId":  pnCategoryId
   },
